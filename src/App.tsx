@@ -1,20 +1,12 @@
 import { TestInterface } from "types";
-import "./App.css";
+import { Header } from "./components/layout/Header";
+import { Map } from "./components/Map/Map";
 
 export function App() {
   return (
     <div className="wrapper">
-      <header>
-        <h1>
-          <strong>Mega </strong>Ogłoszenia{" "}
-        </h1>
-        <button>Dodaj ogłoszenie</button>
-        <div className="search">
-          <input type="text" />
-          <button>Szukaj</button>
-        </div>
-      </header>
-      <div className="map">...</div>
+      <Header />
+      <Map />
     </div>
   );
 }

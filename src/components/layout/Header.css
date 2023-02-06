@@ -12,17 +12,6 @@ header h1 {
   font-size: x-large;
 }
 
-button {
-  text-transform: uppercase;
-  font-weight: 600;
-  color: white;
-  background-color: #2a913e;
-  border: none;
-  padding: 2px 35px;
-  cursor: pointer;
-  border-radius: 2px;
-}
-
 header .search input {
   width: 13em;
   margin-right: 5px;
@@ -32,12 +21,9 @@ header .search {
   display: flex;
 }
 
-.map {
-  background-color: green;
-  height: 100%;
-}
-
 .wrapper {
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
