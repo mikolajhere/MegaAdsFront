@@ -6,6 +6,10 @@ header {
   align-items: center;
 }
 
+header h1 a {
+  text-decoration: none;
+  color: white;
+}
 header h1 {
   color: white;
   font-weight: 200;
@@ -23,7 +27,6 @@ header .search {
 
 .wrapper {
   height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }

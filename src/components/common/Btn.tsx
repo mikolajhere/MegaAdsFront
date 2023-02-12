@@ -7,8 +7,10 @@ interface Props {
 }
 
 export const Btn = (props: Props) => {
-  props.to ? (
-    <Link className="btn" to={props.to}>{props.text}</Link>
+  return props.to ? (
+    <Link className="btn" to={props.to}>
+      {props.text}
+    </Link>
   ) : (
     <button>{props.text}</button>
   );
