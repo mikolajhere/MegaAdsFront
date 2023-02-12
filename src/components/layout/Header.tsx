@@ -3,6 +3,7 @@ import { SearchContext } from "../../context/search.context";
 import { Btn } from "../common/Btn";
 import "./Header.css";
 
+
 export const Header = () => {
   const { search, setSearch } = useContext(SearchContext);
   const [inputVal, setInputVal] = useState(search);
