@@ -1,8 +1,7 @@
-import { FormEventHandler, SyntheticEvent, useContext, useState } from "react";
+import { SyntheticEvent, useContext, useState } from "react";
 import { SearchContext } from "../../context/search.context";
 import { Btn } from "../common/Btn";
 import "./Header.css";
-
 
 export const Header = () => {
   const { search, setSearch } = useContext(SearchContext);
