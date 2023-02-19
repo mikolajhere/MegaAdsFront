@@ -2,12 +2,11 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useContext, useEffect, useState } from "react";
 import { SearchContext } from "../../context/search.context";
 import { SimpleAdEntity } from "types";
-
-import "leaflet/dist/leaflet.css";
-import "./Map.css";
-
 import { icon } from "leaflet";
 import { SingleAd } from "./SingleAd";
+import { apiUrl } from "../../config/api";
+import "leaflet/dist/leaflet.css";
+import "./Map.css";
 
 const ICON = icon({
   iconUrl: "/marker-icon.png",
@@ -20,7 +19,7 @@ export const Map = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(`http://localhost:3001/ad/search/${search}`);
+      const res = await fetch(`${apiUrl}/ad/search/${search}`);
       const data = await res.json();
 
       setAds(data);

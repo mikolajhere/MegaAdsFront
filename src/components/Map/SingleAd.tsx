@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import { apiUrl } from "../../config/api";
 import { AdEntity } from "types";
 
 interface Props {
@@ -11,7 +12,7 @@ export const SingleAd = (props: Props) => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(`http://localhost:3001/ad/${props.id}`);
+      const res = await fetch(`${apiUrl}/ad/${props.id}`);
       const data = await res.json();
       setAd(data);
     })();
